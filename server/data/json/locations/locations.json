@@ -1,0 +1,178 @@
+[
+  {
+    "_id": "5db99bb575ed318546e1949b",
+    "id": 0,
+    "accNo": "0702d3c9-c95b-4bcd-9821-a0c6aad8f2ae",
+    "name": "OMATOM",
+    "sms": "+1 (907) 568-2366",
+    "address": "364 Butler Place, Glidden, Iowa, 7582",
+    "latitude": "-62.027366",
+    "longitude": "-4.321965",
+    "deviceCount": 4
+  },
+  {
+    "_id": "5db99bb6e4a8311dcb495aeb",
+    "id": 1,
+    "accNo": "a1f1b29f-0f3b-4eab-b433-0b61aeac7ff1",
+    "name": "BOLAX",
+    "sms": "+1 (918) 556-2273",
+    "address": "147 Olive Street, Hall, Utah, 9859",
+    "latitude": "59.773273",
+    "longitude": "24.581819",
+    "deviceCount": 2
+  },
+  {
+    "_id": "5db99bb6dc5a06e6bb9760e4",
+    "id": 2,
+    "accNo": "acfef9b4-bd74-48ea-9032-7623afd38fb4",
+    "name": "KENEGY",
+    "sms": "+1 (972) 466-2806",
+    "address": "558 Loring Avenue, Beechmont, Wisconsin, 7355",
+    "latitude": "52.632163",
+    "longitude": "-104.249916",
+    "deviceCount": 3
+  },
+  {
+    "_id": "5db99bb60982f53a16d70982",
+    "id": 3,
+    "accNo": "b80264f6-3bf3-4ab1-9110-559747aaab82",
+    "name": "MAXIMIND",
+    "sms": "+1 (956) 544-3634",
+    "address": "365 Coffey Street, Reinerton, Missouri, 957",
+    "latitude": "-38.906097",
+    "longitude": "-82.591351",
+    "deviceCount": 4
+  },
+  {
+    "_id": "5db99bb61c857388c563721a",
+    "id": 4,
+    "accNo": "d1008d74-321f-44d9-9f19-b2f86e8e14fc",
+    "name": "WAAB",
+    "sms": "+1 (870) 459-3933",
+    "address": "250 Randolph Street, Coldiron, Oregon, 1446",
+    "latitude": "-51.089737",
+    "longitude": "82.816117",
+    "deviceCount": 5
+  },
+  {
+    "_id": "5db99bb612bab0252974087f",
+    "id": 5,
+    "accNo": "a5e010b3-8ce7-464b-b50b-d7008901afbb",
+    "name": "ZYTRAC",
+    "sms": "+1 (852) 457-3008",
+    "address": "646 Downing Street, Albany, Rhode Island, 5284",
+    "latitude": "17.743163",
+    "longitude": "50.416617",
+    "deviceCount": 9
+  },
+  {
+    "_id": "5db99bb6daa896cd9645cbbe",
+    "id": 6,
+    "accNo": "57211f30-9046-4e50-b812-3ded964b312a",
+    "name": "OVERPLEX",
+    "sms": "+1 (818) 498-3638",
+    "address": "743 Karweg Place, Clarksburg, Kansas, 6273",
+    "latitude": "-22.159312",
+    "longitude": "-139.349615",
+    "deviceCount": 8
+  },
+  {
+    "_id": "5db99bb6ee199808c80d0a61",
+    "id": 7,
+    "accNo": "e5853272-8993-418f-8371-10b88cc31396",
+    "name": "MOREGANIC",
+    "sms": "+1 (852) 495-3587",
+    "address": "306 Commerce Street, Leroy, Idaho, 1695",
+    "latitude": "-47.262384",
+    "longitude": "0.282365",
+    "deviceCount": 6
+  },
+  {
+    "_id": "5db99bb69fd9a2d2152b86f4",
+    "id": 8,
+    "accNo": "da47251b-139e-4f6f-b253-0ee3540317da",
+    "name": "VENOFLEX",
+    "sms": "+1 (979) 489-2888",
+    "address": "181 Rockaway Avenue, Snelling, Marshall Islands, 8607",
+    "latitude": "-57.933048",
+    "longitude": "-1.261618",
+    "deviceCount": 2
+  },
+  {
+    "_id": "5db99bb684faa96bc0efd7f2",
+    "id": 9,
+    "accNo": "3ec45f60-336e-48ba-8f4f-26843e89178c",
+    "name": "SPACEWAX",
+    "sms": "+1 (806) 587-3515",
+    "address": "705 Ludlam Place, Riceville, Montana, 4530",
+    "latitude": "-73.538114",
+    "longitude": "123.655165",
+    "deviceCount": 4
+  },
+  {
+    "_id": "5db99bb6c96d34ae904e5845",
+    "id": 10,
+    "accNo": "1b8c099d-d51e-451c-8de3-3b85f5245b68",
+    "name": "OHMNET",
+    "sms": "+1 (919) 547-3002",
+    "address": "545 Schaefer Street, Catherine, Guam, 1818",
+    "latitude": "41.451664",
+    "longitude": "-75.902707",
+    "deviceCount": 4
+  },
+  {
+    "_id": "5db99bb68d3812edf4553b28",
+    "id": 11,
+    "accNo": "d12c490e-3e8a-4b18-b0b5-8efa90cffdfb",
+    "name": "EXPOSA",
+    "sms": "+1 (829) 566-3753",
+    "address": "179 Woodruff Avenue, Fingerville, Florida, 1429",
+    "latitude": "57.662274",
+    "longitude": "166.856135",
+    "deviceCount": 4
+  },
+  {
+    "_id": "5db99bb6c358b8b44338c5eb",
+    "id": 12,
+    "accNo": "749d43ba-fc35-43fb-8d36-72608fb006bc",
+    "name": "PEARLESEX",
+    "sms": "+1 (955) 560-3442",
+    "address": "584 Jackson Street, Dale, New Hampshire, 8586",
+    "latitude": "79.986684",
+    "longitude": "93.886599",
+    "deviceCount": 7
+  },
+  {
+    "_id": "5db99bb63dc66e2e92654f2c",
+    "id": 13,
+    "accNo": "37006db7-8389-4644-9647-c8ebf59f85fe",
+    "name": "SURELOGIC",
+    "sms": "+1 (880) 522-2119",
+    "address": "865 Richmond Street, Whipholt, Federated States Of Micronesia, 9275",
+    "latitude": "65.201612",
+    "longitude": "-139.213288",
+    "deviceCount": 1
+  },
+  {
+    "_id": "5db99bb62d5cef0b040e3ecd",
+    "id": 14,
+    "accNo": "87fc74ef-42df-4bec-b97a-e583945d2f23",
+    "name": "MYOPIUM",
+    "sms": "+1 (990) 574-2022",
+    "address": "947 Bragg Court, Alden, California, 1669",
+    "latitude": "-49.48088",
+    "longitude": "109.415215",
+    "deviceCount": 12
+  },
+  {
+    "_id": "5db99bb6903e0b5c98634e26",
+    "id": 15,
+    "accNo": "c2ab60f9-f238-4eb9-a436-3e9ced134c3f",
+    "name": "PROWASTE",
+    "sms": "+1 (853) 525-2335",
+    "address": "819 Norwood Avenue, Gouglersville, Mississippi, 225",
+    "latitude": "33.963047",
+    "longitude": "99.655271",
+    "deviceCount": 1
+  }
+]

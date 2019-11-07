@@ -1,0 +1,74 @@
+{
+    "title": "Service Mode",
+    "results": [{
+            "_id": "5dac9917195287a67d8b6723",
+            "name": "Room 319",
+            "type": "Type 1",
+            "status": "Offline",
+            "location": "Room 102",
+            "serialNumber": "74136d62-91cf-4e71-b825-6407bcb6dceb",
+            "ipAddress": "198.170.78.86",
+            "firmWare": "333.10.21 v1"
+        },
+        {
+            "_id": "5dac991710bdb811aef8ac3b",
+            "name": "Room 319",
+            "type": "Type 2",
+            "status": "Offline",
+            "location": "Room 421",
+            "serialNumber": "fa5aff9a-9859-4c7e-bcf1-81bbc98eea88",
+            "ipAddress": "141.100.28.13",
+            "firmWare": "123.65.21 v2"
+        },
+        {
+            "_id": "5dac9917ed2599b23b91708c",
+            "name": "Room 319",
+            "type": "Type 2",
+            "status": "Active",
+            "location": "Room 200",
+            "serialNumber": "139747cc-a170-4490-a3eb-7962da13eaac",
+            "ipAddress": "166.154.64.77",
+            "firmWare": "123.65.21 v2"
+        },
+        {
+            "_id": "5dac991711491f78777e93dd",
+            "name": "Room 421",
+            "type": "Type 5",
+            "status": "Active",
+            "location": "Room 414",
+            "serialNumber": "08dac3e2-6b1f-4995-b9d2-2cf1cf295336",
+            "ipAddress": "186.145.76.19",
+            "firmWare": "333.10.21 v1"
+        },
+        {
+            "_id": "5dac9917d5f4fa1fa21fbdb1",
+            "name": "Room 319",
+            "type": "Type 5",
+            "status": "Offline",
+            "location": "Room 421",
+            "serialNumber": "40180689-558b-4f8f-be1c-8178a498f25d",
+            "ipAddress": "167.114.82.23",
+            "firmWare": "333.10.21 v1"
+        },
+        {
+            "_id": "5dac99174953f223249c968d",
+            "name": "Room 310",
+            "type": "Type 2",
+            "status": "Offline",
+            "location": "Room 200",
+            "serialNumber": "88b1cd2b-b8fa-4f20-aa8e-3b920a9bea5c",
+            "ipAddress": "125.187.84.73",
+            "firmWare": "333.233.21 v2"
+        },
+        {
+            "_id": "5dac9917f4167bf06fe94ccc",
+            "name": "Room 102",
+            "type": "Type 1",
+            "status": "Active",
+            "location": "Room 319",
+            "serialNumber": "bdca5b34-18c0-4210-b023-661193086553",
+            "ipAddress": "134.142.94.66",
+            "firmWare": "333.10.21 v1"
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "_id": "5dabc1a35f717c408530db44",
+    "createdDate": "Tuesday, November 6, 2018 9:50 AM",
+    "location": "Room 220",
+    "macAddress": "40:3b:6g:7f:3d:5k",
+    "status": "Offline",
+    "ipAddress": "194.248.140.61",
+    "userId": "732 Jan 8th 2014"
+  },
+  {
+    "_id": "5dabc1a316283e9d2b5532dd",
+    "createdDate": "Thursday, July 18, 2019 11:48 PM",
+    "location": "Room 500",
+    "macAddress": "36:1b:9g:9f:9d:2k",
+    "status": "Online",
+    "ipAddress": "209.287.114.46",
+    "userId": "186 May 26th 2017"
+  },
+  {
+    "_id": "5dabc1a3235485eff843c8b6",
+    "createdDate": "Friday, October 28, 2016 2:56 AM",
+    "location": "Room 100",
+    "macAddress": "26:8b:9g:2f:6d:9k",
+    "status": "Online",
+    "ipAddress": "272.187.121.30",
+    "userId": "983 Jun 11th 2014"
+  },
+  {
+    "_id": "5dabc1a3f40682df3e7a18e7",
+    "createdDate": "Sunday, May 28, 2017 1:02 AM",
+    "location": "Room 220",
+    "macAddress": "25:1b:9g:4f:8d:1k",
+    "status": "Offline",
+    "ipAddress": "102.262.158.62",
+    "userId": "767 May 12th 2018"
+  },
+  {
+    "_id": "5dabc1a3905a402db385daea",
+    "createdDate": "Saturday, June 18, 2016 4:19 AM",
+    "location": "Room 500",
+    "macAddress": "23:8b:2g:4f:1d:6k",
+    "status": "Online",
+    "ipAddress": "142.212.270.17",
+    "userId": "527 Mar 29th 2014"
+  },
+  {
+    "_id": "5dabc1a387030194b90d74c0",
+    "createdDate": "Tuesday, October 2, 2018 4:23 AM",
+    "location": "Office",
+    "macAddress": "36:8b:3g:8f:5d:7k",
+    "status": "Online",
+    "ipAddress": "216.236.226.62",
+    "userId": "364 Jan 15th 2014"
+  },
+  {
+    "_id": "5dabc1a33e31fc36b10ee4aa",
+    "createdDate": "Friday, August 3, 2018 3:46 AM",
+    "location": "Office",
+    "macAddress": "39:9b:9g:9f:8d:4k",
+    "status": "Offline",
+    "ipAddress": "187.168.140.78",
+    "userId": "396 Jan 31st 2016"
+  },
+  {
+    "_id": "5dabc1a3e2f06f326e5d12d6",
+    "createdDate": "Wednesday, April 3, 2019 8:20 AM",
+    "location": "Room 100",
+    "macAddress": "36:3b:1g:6f:6d:5k",
+    "status": "Offline",
+    "ipAddress": "238.284.216.12",
+    "userId": "292 Jul 15th 2018"
+  },
+  {
+    "_id": "5dabc1a36f9ebc07dfffc4c0",
+    "createdDate": "Wednesday, May 1, 2019 3:09 AM",
+    "location": "Room 202",
+    "macAddress": "40:3b:6g:9f:3d:2k",
+    "status": "State: armed",
+    "ipAddress": "161.218.267.47",
+    "userId": "793 Dec 6th 2014"
+  }
+]

@@ -1,0 +1,10 @@
+@import "../../layout/styles/default_settings";
+
+.notFound {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+}

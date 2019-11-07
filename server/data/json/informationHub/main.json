@@ -1,0 +1,35 @@
+[
+    {
+      "_id": "5dabdec8977b974f5a77140b",
+      "dispatch": 0,
+      "localNetwork": "110a5339-1cc5-4301-a22e-88735f78db90",
+      "remoteNetwork": true,
+      "counts": [
+        {
+          "_id": "5dabdec867043f7e2cb668a0",
+          "title": "Open",
+          "count": 5
+        },
+        {
+          "_id": "5dabdec87c2e5740a9158c9b",
+          "title": "Online",
+          "count": 10
+        },
+        {
+          "_id": "5dabdec8b3221d4b039b0df0",
+          "title": "Offline",
+          "count": 10
+        },
+        {
+          "_id": "5dabdec843e686655490fb9a",
+          "title": "Service Mode",
+          "count": 5
+        },
+        {
+          "_id": "5dabdec8a657e08a7dbab169",
+          "title": "Total",
+          "count": 1
+        }
+      ]
+    }
+  ]
