@@ -7,7 +7,7 @@ import { useTransition, animated } from "react-spring";
 import withUnstated from "../../core/WithUnstated";
 
 import Reservations from "../../pages/Reservations";
-import Reservation from "../../pages/Reservation";
+import ReservationDetail from "../../pages/ReservationDetail";
 import { SUBDIRECTORY } from "../../utils/config";
 
 import styles from "./PageContent.module.scss";
@@ -70,7 +70,10 @@ const PageContent = ({ store }, rest) => {
         <Route exact path={`${SUBDIRECTORY}/`} component={Reservations} />
 
         {/*---------- Add Custom Routes Here ----------*/}
-        <Route path={`${SUBDIRECTORY}/reservation`} component={Reservation} />
+        <Route
+          path={`${SUBDIRECTORY}/reservation/:id`}
+          component={ReservationDetail}
+        />
         {/*------------ End Custom Routes ------------*/}
       </Switch>
     );

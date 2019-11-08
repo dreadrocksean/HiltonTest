@@ -1,0 +1,21 @@
+@import '../../../layout/styles/default_settings';
+
+.root {
+    display: flex;
+    margin: 0 -2rem;
+}
+.formControl {
+    margin: 4rem 0 0;
+}
+.controlLabel {
+    margin-right: 2.8rem;
+    padding-right: 1rem;
+}
+.group {
+    // margin: 1rem;
+    padding: 0.5rem 2rem;
+}
+.legend {
+    color: $black;
+    font-weight: bold;
+}

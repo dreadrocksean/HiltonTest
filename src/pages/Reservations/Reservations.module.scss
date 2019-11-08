@@ -2,6 +2,51 @@
 
 .root {
   flex: 1;
-  background: lightblue;
+  background: lighten(saturate($secondary, 30%), 40%);
   padding: 0 2rem;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 20rem;
+  height: 15rem;
+}
+
+.list {
+  height: 100%;
+  overflow: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-bottom: 2px;
+  font-size: 1.2rem;
+  color: $secondary;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(white, 0.5);
+  padding: 1rem;
+  margin-bottom: 2px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: $gray8;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover {
+    background: rgba(white, 0.5);
+  }
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.loading {
+  color: $gray8;
 }

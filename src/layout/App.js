@@ -10,7 +10,6 @@ import {
   faBars
 } from "@fortawesome/free-solid-svg-icons";
 
-import OverlayMenu from "../containers/OverlayMenu";
 import Header from "../containers/Header";
 import PageContainer from "../containers/PageContainer";
 import Footer from "../containers/Footer";
@@ -23,7 +22,6 @@ library.add(faBell, faExclamationTriangle, faCog, faSitemap, faCoffee, faBars);
 
 const App = () => (
   <div className={styles.app}>
-    <OverlayMenu />
     <Router>
       <div style={{ display: "flex", flex: 1 }}>
         <Switch>

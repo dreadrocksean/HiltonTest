@@ -1,6 +1,4 @@
 import { Container } from "unstated";
-import AuthStore from "./AuthStore";
-import MessageStore from "./MessageStore";
 
 const initState = {
   currRoute: null,
@@ -15,9 +13,6 @@ class MainStore extends Container {
   constructor() {
     super();
     this.state = initState;
-
-    this.initStore(AuthStore);
-    this.initStore(MessageStore);
   }
 
   initStore = (store, cb) => {
@@ -35,18 +30,7 @@ class MainStore extends Container {
     store.init(cb);
   };
 
-  toggleSidebar = () =>
-    this.setState({ sidebarMinimized: !this.state.sidebarMinimized });
-
   updateCurrRoute = route => this.setState({ currRoute: route });
-
-  get auth() {
-    return AuthStore;
-  }
-
-  get message() {
-    return MessageStore;
-  }
 }
 
 export default MainStore;

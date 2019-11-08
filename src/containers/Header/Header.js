@@ -7,7 +7,6 @@ import Navigation from "./Navigation";
 import NavToggle from "./NavToggle";
 import NavLinks from "./NavLinks";
 import NavUnauthenticated from "./NavUnauthenticated";
-import StatusMessage from "../StatusMessage";
 
 import styles from "./Header.module.scss";
 
@@ -22,7 +21,6 @@ const Header = () => (
       <Navigation />
       <NavToggle />
     </div>
-    <StatusMessage />
   </div>
 );
 

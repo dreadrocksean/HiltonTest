@@ -1,0 +1,19 @@
+@import "../../layout/styles/default_settings";
+
+.root {
+  margin-top: 2rem;
+}
+
+.submit {
+  margin-top: 1.5rem;
+}
+
+.inputField {
+  background: $white;
+  font-size: 3rem;
+}
+
+.outline {
+  background-color: $white;
+  border-radius: 0.3em;
+}

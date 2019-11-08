@@ -1,5 +1,3 @@
-const graphql = require("graphql");
-// const fetch = require("node-fetch");
 const {
   GraphQLObjectType,
   GraphQLString,
@@ -7,8 +5,9 @@ const {
   GraphQLList,
   GraphQLSchema,
   GraphQLID,
+  // GraphQLDate,
   GraphQLNonNull
-} = graphql;
+} = require("graphql");
 
 const { delay } = require("../utils/utils");
 const Reservation = require("../models/reservation");
@@ -18,6 +17,7 @@ const ReservationType = new GraphQLObjectType({
   fields: () => ({
     _id: { type: GraphQLID },
     guestName: { type: GraphQLString },
+    createdAt: { type: GraphQLString },
     hotelName: { type: GraphQLString },
     arrivalDate: { type: GraphQLString },
     departureDate: { type: GraphQLString }
