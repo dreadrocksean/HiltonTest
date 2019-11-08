@@ -2,8 +2,8 @@
 
 .root {
   flex: 1;
-  background: lighten(saturate($secondary, 30%), 40%);
-  padding: 0 2rem;
+  background: lighten(desaturate($primary, 40%), 55%);
+  padding: 0 2rem 2rem;
 }
 
 .listContainer {
@@ -17,6 +17,7 @@
 .list {
   height: 100%;
   overflow: auto;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 header {
@@ -25,7 +26,7 @@ header {
   padding: 0 1rem;
   margin-bottom: 2px;
   font-size: 1.2rem;
-  color: $secondary;
+  color: $primary;
 }
 
 .row {

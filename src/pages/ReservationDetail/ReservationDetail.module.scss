@@ -2,7 +2,7 @@
 
 .root {
   flex: 1;
-  background: lighten(saturate($secondary, 10%), 30%);
+  background: lighten(desaturate($primary, 40%), 55%);
   padding: 0 2rem;
 }
 .loading {

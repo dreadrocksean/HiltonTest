@@ -1,9 +1,9 @@
 @import "./mixins/colored-shadows";
 
 // Brand Colors
-$primary: #ffa500 !default;
+$primary: #19479e !default;
 $primaryDark: saturate(darken($primary, 20%), 20%) !default;
-$secondary: #3c8dbc !default;
+$secondary: rgb(0, 156, 222) !default;
 $secondaryDark: saturate(darken($secondary, 20%), 20%) !default;
 $appDark: #222d32 !default;
 

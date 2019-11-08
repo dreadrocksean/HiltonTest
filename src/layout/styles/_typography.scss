@@ -42,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $secondary;
+  color: $primary;
 }
 
 /* Major Third Ratio: https://type-scale.com/ */
@@ -75,7 +75,6 @@ img {
   display: inline-block;
   max-width: 100%;
   height: auto;
-  vertical-align: middle;
   -ms-interpolation-mode: bicubic;
   border: 0;
 }
