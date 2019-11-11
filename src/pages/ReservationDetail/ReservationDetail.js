@@ -1,51 +1,62 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { compose } from "recompose";
-// import { graphql } from "react-apollo";
 
-import {
-  getReservationQuery,
-  getReservationsQuery,
-  addReservationMutation
-} from "../../queries/queries";
+import withUnstated from "../../core/WithUnstated";
+import * as queries from "../../queries";
 import styles from "./ReservationDetail.module.scss";
 import ReservationForm from "../../core/ReservationForm";
-import Spinner from "../../core/Spinner";
+import LoaderBar from "../../core/LoaderBar";
 
-const ReservationDetail = ({ getReservationQuery }) => {
-  const [state, setState] = useState({
-    dateCreated: "",
-    guestName: "",
-    hotelName: "",
-    arrivalDate: "",
-    departureDate: ""
-  });
+const ReservationDetail = ({
+  store,
+  getReservationQuery: { reservation, loading },
+  editReservationMutation
+}) => {
+  useEffect(() => {
+    if (!reservation) return;
+    store.setState({
+      currReservation: reservation
+    });
+  }, [reservation, store]);
 
   const handleChange = name => evt => {
-    setState({ ...state, [name]: evt.target.value });
+    store.setState({
+      currReservation: {
+        ...store.state.currReservation,
+        [name]: evt.target.value
+      }
+    });
   };
 
-  const addReservation = () => {
-    addReservationMutation({
-      variables: {
-        guestName: state.guestName,
-        hotelName: state.hotelName,
-        arrivalDate: state.arrivalDate,
-        departureDate: state.departureDate
-      },
-      refetchQueries: [{ query: getReservationsQuery }]
-    });
+  const updateReservation = async evt => {
+    evt.preventDefault();
+    console.log("currReservation: ", store.state.currReservation);
+    try {
+      await editReservationMutation({
+        variables: {
+          _id: store.state.currReservation._id,
+          guestName: store.state.currReservation.guestName,
+          hotelName: store.state.currReservation.hotelName,
+          arrivalDate: store.state.currReservation.arrivalDate,
+          departureDate: store.state.currReservation.departureDate
+        },
+        refetchQueries: [{ query: queries.getReservationGQL }]
+      });
+    } catch (e) {
+      console.log("error: ", e);
+    }
   };
 
   return (
     <div className={styles.root}>
-      {getReservationQuery.loading ? (
-        <Spinner style={styles.spinner} />
+      {!store.state.currReservation ? (
+        <LoaderBar />
       ) : (
         <ReservationForm
-          fields={getReservationQuery.reservation}
+          fields={store.state.currReservation}
           handleChange={handleChange}
-          submit={addReservation}
+          submit={updateReservation}
         />
       )}
     </div>
@@ -59,7 +70,6 @@ ReservationDetail.propTypes = {
 };
 
 export default compose(
-  getReservationQuery,
-  getReservationsQuery,
-  addReservationMutation
-)(ReservationDetail);
+  queries.getReservationQuery,
+  queries.editReservationMutation
+)(withUnstated(ReservationDetail));

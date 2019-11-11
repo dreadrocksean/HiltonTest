@@ -77,6 +77,30 @@ const Mutation = new GraphQLObjectType({
           throw new GraphQLError(err.message);
         }
       }
+    },
+    editReservation: {
+      type: ReservationType,
+      args: {
+        delay: { type: GraphQLInt },
+        _id: { type: new GraphQLNonNull(GraphQLID) },
+        guestName: { type: GraphQLString },
+        hotelName: { type: GraphQLString },
+        arrivalDate: { type: GraphQLString },
+        departureDate: { type: GraphQLString }
+      },
+      resolve: async (parent, args) => {
+        const reservation = await Reservation.findOneAndUpdate(
+          { _id: args._id },
+          {
+            guestName: args.guestName,
+            hotelName: args.hotelName,
+            arrivalDate: args.arrivalDate,
+            departureDate: args.departureDate
+          },
+          { new: true }
+        );
+        return reservation;
+      }
     }
   }
 });

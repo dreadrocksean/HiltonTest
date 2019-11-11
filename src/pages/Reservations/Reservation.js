@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-// import { getReservationQuery } from "../../data/queries/queries";
 import styles from "./Reservations.module.scss";
 
 const Reservation = ({ hotel, date, id, showReservation }) => {
@@ -23,4 +22,3 @@ Reservation.propTypes = {
 };
 
 export default Reservation;
-// export default getReservationQuery(Reservation);

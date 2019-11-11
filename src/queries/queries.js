@@ -61,3 +61,29 @@ export const addReservationGQL = gql`
 export const addReservationMutation = graphql(addReservationGQL, {
   name: "addReservationMutation"
 });
+
+export const editReservationGQL = gql`
+  mutation(
+    $_id: ID!
+    $guestName: String
+    $hotelName: String
+    $arrivalDate: String
+    $departureDate: String
+  ) {
+    editReservation(
+      _id: $_id
+      guestName: $guestName
+      hotelName: $hotelName
+      arrivalDate: $arrivalDate
+      departureDate: $departureDate
+    ) {
+      ...resFrag
+      guestName
+      departureDate
+    }
+  }
+  ${frag}
+`;
+export const editReservationMutation = graphql(editReservationGQL, {
+  name: "editReservationMutation"
+});

@@ -15,7 +15,6 @@ import styles from "./Reservations.module.scss";
 
 const Reservations = ({
   store,
-  getReservationsQuery,
   getReservationsQuery: { reservations, loading },
   addReservationMutation
 }) => {
@@ -48,7 +47,6 @@ const Reservations = ({
 
   const addReservation = async evt => {
     evt.preventDefault();
-    console.log("addReservationMutation: ", addReservationMutation);
     try {
       await addReservationMutation({
         variables: {

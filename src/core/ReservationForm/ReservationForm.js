@@ -29,7 +29,11 @@ const ReservationForm = ({ fields, handleChange, submit }) => (
         </Grid>
       ))}
     </Grid>
-    <AppButton value="Add Reservation" onClick={submit} style={styles.submit} />
+    <AppButton
+      value="Update Reservation"
+      onClick={submit}
+      style={styles.submit}
+    />
   </form>
 );
 

@@ -15,7 +15,8 @@ const getErrorCode = errorName => errorType[errorName];
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false
 });
 mongoose.connection.once("open", () => {
   console.log("connected to mongodb");
@@ -29,7 +30,8 @@ app.use(
     schema,
     graphiql: true,
     customFormatErrorFn: err => {
-      const { message, statusCode } = getErrorCode(err.message);
+      console.log("err: ", err);
+      const { message, statusCode } = getErrorCode(err.message) || err;
       return { message, statusCode };
     }
   })
