@@ -4,10 +4,14 @@ const PORT = process.env.PORT || 4000;
 const graphqlHTTP = require("express-graphql");
 const cors = require("cors");
 const schema = require("./schema/schema");
+const { errorType } = require("./constants");
+
 const uri =
   "mongodb+srv://test:1234@cluster0-ucfpv.mongodb.net/test?retryWrites=true&w=majority";
 
 const app = express();
+
+const getErrorCode = errorName => errorType[errorName];
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
@@ -23,7 +27,11 @@ app.use(
   "/graphql",
   graphqlHTTP({
     schema,
-    graphiql: true
+    graphiql: true,
+    customFormatErrorFn: err => {
+      const { message, statusCode } = getErrorCode(err.message);
+      return { message, statusCode };
+    }
   })
 );
 

@@ -5,6 +5,7 @@
   background: lighten(desaturate($primary, 40%), 55%);
   padding: 0 2rem;
 }
-.loading {
-  color: $gray8;
+.spinner {
+  font-size: 4rem;
+  top: 2rem;
 }

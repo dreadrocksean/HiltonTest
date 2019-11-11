@@ -1,0 +1,9 @@
+@import "../../layout/styles/default_settings";
+
+.loading {
+  position: relative;
+  color: rgba($primary, 0.5);
+  font-size: 3rem;
+  top: calc(50% - 1.5rem);
+  left: calc(50% - 1.5rem);
+}

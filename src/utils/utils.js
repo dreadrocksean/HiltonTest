@@ -5,3 +5,8 @@ export const delay = (t, v) =>
   new Promise(resolve => setTimeout(resolve.bind(null, v), t));
 
 export const noop = () => {};
+
+export const filterErrorMessage = msg => {
+  const splits = msg.split(":");
+  return splits[splits.length - 1].trim();
+};

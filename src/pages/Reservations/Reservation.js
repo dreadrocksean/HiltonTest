@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 import styles from "./Reservations.module.scss";
 
 const Reservation = ({ hotel, date, id, showReservation }) => {
-  const goToDetail = () => {};
-
   return (
     <Link
       className={styles.row}

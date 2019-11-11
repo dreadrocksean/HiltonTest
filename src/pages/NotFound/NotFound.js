@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import styles from "./NotFound.module.scss";
 
@@ -9,7 +8,5 @@ const NotFound = () => (
     <p>We are sorry but the page you are looking for does not exist.</p>
   </div>
 );
-
-NotFound.propTypes = {};
 
 export default NotFound;

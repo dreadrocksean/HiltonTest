@@ -1,44 +1,41 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { Grid } from "@material-ui/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { Grid } from "@material-ui/core";
 import withUnstated from "../../core/WithUnstated";
 import { compose } from "recompose";
 
 import Reservation from "./Reservation";
 import ReservationForm from "../../core/ReservationForm";
+import Spinner from "../../core/Spinner";
 
-import {
-  getReservationsQuery,
-  addReservationMutation
-} from "../../queries/queries";
-import { dynamicSort } from "../../utils";
+import * as queries from "../../queries";
+import { dynamicSort, filterErrorMessage } from "../../utils";
 
 import styles from "./Reservations.module.scss";
 
 const Reservations = ({
   store,
   getReservationsQuery,
+  getReservationsQuery: { reservations, loading },
   addReservationMutation
 }) => {
   useEffect(() => {
-    if (!getReservationsQuery.reservations) return;
+    if (!reservations) return;
     store.setState({
-      reservations: dynamicSort(
-        getReservationsQuery.reservations,
-        "createdAt",
-        -1
-      )
+      reservations: dynamicSort(reservations, "createdAt", -1)
     });
-  }, [getReservationsQuery.reservations, store]);
+  }, [reservations, store]);
 
-  const [state, setState] = useState({
+  const initFields = {
     guestName: "",
     hotelName: "",
     arrivalDate: "",
     departureDate: ""
-  });
+  };
+
+  const [state, setState] = useState(initFields);
+
+  const [errors, setErrors] = useState([]);
 
   const showReservation = id => () => {
     const reservation = store.state.reservations.find(v => v._id === id);
@@ -49,16 +46,24 @@ const Reservations = ({
     setState({ ...state, [name]: evt.target.value });
   };
 
-  const addReservation = () => {
-    addReservationMutation({
-      variables: {
-        guestName: state.guestName,
-        hotelName: state.hotelName,
-        arrivalDate: state.arrivalDate,
-        departureDate: state.departureDate
-      },
-      refetchQueries: [{ query: getReservationsQuery }]
-    });
+  const addReservation = async evt => {
+    evt.preventDefault();
+    console.log("addReservationMutation: ", addReservationMutation);
+    try {
+      await addReservationMutation({
+        variables: {
+          guestName: state.guestName,
+          hotelName: state.hotelName,
+          arrivalDate: state.arrivalDate,
+          departureDate: state.departureDate
+        },
+        refetchQueries: [{ query: queries.getReservationsGQL }]
+      });
+      setState(initFields);
+    } catch (e) {
+      console.log("errors: ", errors);
+      setErrors([e.message]);
+    }
   };
 
   return (
@@ -70,18 +75,24 @@ const Reservations = ({
           <div>Arrival Date</div>
         </header>
         <div className={styles.list}>
-          {store.state.reservations.length ? (
-            store.state.reservations.map(v => (
-              <Reservation
-                key={v._id}
-                showReservation={showReservation(v._id)}
-                hotel={v.hotelName}
-                date={v.arrivalDate}
-                id={v._id}
-              />
-            ))
+          {!loading ? (
+            store.state.reservations.length ? (
+              store.state.reservations.map(v => (
+                <Reservation
+                  key={v._id}
+                  showReservation={showReservation(v._id)}
+                  hotel={v.hotelName}
+                  date={v.arrivalDate}
+                  id={v._id}
+                />
+              ))
+            ) : (
+              <h3 className={styles.listMessage}>
+                Add new reservations with the form below
+              </h3>
+            )
           ) : (
-            <h2 className={styles.loading}>Loading Reservation List . . .</h2>
+            <Spinner />
           )}
         </div>
       </div>
@@ -90,6 +101,11 @@ const Reservations = ({
         handleChange={handleChange}
         submit={addReservation}
       />
+      {errors.map((error, i) => (
+        <div className={styles.error} key={i}>
+          {filterErrorMessage(error)}
+        </div>
+      ))}
     </div>
   );
 };
@@ -101,6 +117,6 @@ Reservations.propTypes = {
 };
 
 export default compose(
-  getReservationsQuery,
-  addReservationMutation
+  queries.getReservationsQuery,
+  queries.addReservationMutation
 )(withUnstated(Reservations));

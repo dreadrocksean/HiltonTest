@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { compose } from "recompose";
-import { graphql } from "react-apollo";
+// import { graphql } from "react-apollo";
 
 import {
   getReservationQuery,
@@ -10,6 +10,7 @@ import {
 } from "../../queries/queries";
 import styles from "./ReservationDetail.module.scss";
 import ReservationForm from "../../core/ReservationForm";
+import Spinner from "../../core/Spinner";
 
 const ReservationDetail = ({ getReservationQuery }) => {
   const [state, setState] = useState({
@@ -39,7 +40,7 @@ const ReservationDetail = ({ getReservationQuery }) => {
   return (
     <div className={styles.root}>
       {getReservationQuery.loading ? (
-        <h2 className={styles.loading}>Loading Reservation...</h2>
+        <Spinner style={styles.spinner} />
       ) : (
         <ReservationForm
           fields={getReservationQuery.reservation}

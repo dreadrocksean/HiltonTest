@@ -1,14 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faBell,
-  faExclamationTriangle,
-  faCog,
-  faSitemap,
-  faCoffee,
-  faBars
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import Header from "../containers/Header";
 import PageContainer from "../containers/PageContainer";
@@ -18,7 +11,7 @@ import { SUBDIRECTORY } from "../utils/config";
 
 import styles from "./styles/App.module.scss";
 
-library.add(faBell, faExclamationTriangle, faCog, faSitemap, faCoffee, faBars);
+library.add(faSpinner, faBars);
 
 const App = () => (
   <div className={styles.app}>

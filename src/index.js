@@ -19,7 +19,18 @@ const httpLink = createHttpLink({
 
 const client = new ApolloClient({
   link: httpLink,
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
+  onError: ({ graphQLErrors, networkError, operation, forward }) => {
+    if (graphQLErrors) {
+      for (let err of graphQLErrors) {
+        console.log("error codes: ", err.extensions.code);
+        // switch (err.extensions.code) {
+        //   case "ANOTHER_ERROR_CODE":
+        //   // ...
+        // }
+      }
+    }
+  }
 });
 
 ReactDOM.render(

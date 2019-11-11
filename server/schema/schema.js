@@ -1,4 +1,7 @@
+// const validator = require("validator");
+
 const {
+  GraphQLError,
   GraphQLObjectType,
   GraphQLString,
   GraphQLInt,
@@ -8,9 +11,11 @@ const {
   // GraphQLDate,
   GraphQLNonNull
 } = require("graphql");
+const { errorName } = require("../constants");
 
 const { delay } = require("../utils/utils");
 const Reservation = require("../models/reservation");
+// const ValidationError = require("./ValidationError");
 
 const ReservationType = new GraphQLObjectType({
   name: "Reservation",
@@ -62,7 +67,15 @@ const Mutation = new GraphQLObjectType({
           arrivalDate: args.arrivalDate,
           departureDate: args.departureDate
         });
-        return reservation.save();
+
+        try {
+          if (Object.keys(args).find(k => !args[k].trim())) {
+            throw new Error(errorName.INVALID_FIELD);
+          }
+          return reservation.save();
+        } catch (err) {
+          throw new GraphQLError(err.message);
+        }
       }
     }
   }
