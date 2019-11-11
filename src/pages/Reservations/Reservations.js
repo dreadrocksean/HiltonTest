@@ -59,7 +59,6 @@ const Reservations = ({
       });
       setState(initFields);
     } catch (e) {
-      console.log("errors: ", errors);
       setErrors([e.message]);
     }
   };
@@ -98,6 +97,7 @@ const Reservations = ({
         fields={state}
         handleChange={handleChange}
         submit={addReservation}
+        type="Add"
       />
       {errors.map((error, i) => (
         <div className={styles.error} key={i}>
@@ -109,9 +109,10 @@ const Reservations = ({
 };
 
 Reservations.propTypes = {
-  classes: PropTypes.object,
-  route: PropTypes.string,
-  name: PropTypes.string
+  store: PropTypes.object,
+  getReservationsQuery: PropTypes.object,
+  addReservationMutation: PropTypes.func,
+  route: PropTypes.string
 };
 
 export default compose(

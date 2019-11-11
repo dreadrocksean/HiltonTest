@@ -87,3 +87,18 @@ export const editReservationGQL = gql`
 export const editReservationMutation = graphql(editReservationGQL, {
   name: "editReservationMutation"
 });
+
+export const deleteReservationGQL = gql`
+  mutation($_id: ID!) {
+    deleteReservation(_id: $_id) {
+      ...resFrag
+      guestName
+      departureDate
+    }
+  }
+  ${frag}
+`;
+export const deleteReservationMutation = graphql(deleteReservationGQL, {
+  name: "deleteReservationMutation",
+  options: props => ({ variables: { id: props.match.params.id } })
+});

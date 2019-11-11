@@ -15,7 +15,6 @@ const { errorName } = require("../constants");
 
 const { delay } = require("../utils/utils");
 const Reservation = require("../models/reservation");
-// const ValidationError = require("./ValidationError");
 
 const ReservationType = new GraphQLObjectType({
   name: "Reservation",
@@ -99,6 +98,19 @@ const Mutation = new GraphQLObjectType({
           },
           { new: true }
         );
+        return reservation;
+      }
+    },
+    deleteReservation: {
+      type: ReservationType,
+      args: {
+        delay: { type: GraphQLInt },
+        _id: { type: new GraphQLNonNull(GraphQLID) }
+      },
+      resolve: async (parent, args) => {
+        const reservation = await Reservation.findOneAndDelete({
+          _id: args._id
+        });
         return reservation;
       }
     }

@@ -11,7 +11,8 @@ import LoaderBar from "../../core/LoaderBar";
 const ReservationDetail = ({
   store,
   getReservationQuery: { reservation, loading },
-  editReservationMutation
+  editReservationMutation,
+  deleteReservationMutation
 }) => {
   useEffect(() => {
     if (!reservation) return;
@@ -31,7 +32,6 @@ const ReservationDetail = ({
 
   const updateReservation = async evt => {
     evt.preventDefault();
-    console.log("currReservation: ", store.state.currReservation);
     try {
       await editReservationMutation({
         variables: {
@@ -48,6 +48,19 @@ const ReservationDetail = ({
     }
   };
 
+  const deleteReservation = async evt => {
+    try {
+      await deleteReservationMutation({
+        variables: {
+          _id: store.state.currReservation._id
+        },
+        refetchQueries: [{ query: queries.getReservationsGQL }]
+      });
+    } catch (e) {
+      console.log("error: ", e);
+    }
+  };
+
   return (
     <div className={styles.root}>
       {!store.state.currReservation ? (
@@ -57,6 +70,8 @@ const ReservationDetail = ({
           fields={store.state.currReservation}
           handleChange={handleChange}
           submit={updateReservation}
+          type="Update"
+          remove={deleteReservation}
         />
       )}
     </div>
@@ -71,5 +86,6 @@ ReservationDetail.propTypes = {
 
 export default compose(
   queries.getReservationQuery,
-  queries.editReservationMutation
+  queries.editReservationMutation,
+  queries.deleteReservationMutation
 )(withUnstated(ReservationDetail));

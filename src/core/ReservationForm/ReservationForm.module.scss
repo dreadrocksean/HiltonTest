@@ -6,6 +6,15 @@
 
 .submit {
   margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.remove {
+  background-color: $errorRed !important;
 }
 
 .input {
